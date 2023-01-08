@@ -1,15 +1,17 @@
-let input$$ = document.getElementById("item")
-let button$$ = document.querySelector(".btn-add")
-let divLi$$ = document.querySelector(".li-container")
-let empty$$ = document.querySelector(".empty")
+let input$$ = document.getElementById("input")
+let button$$ = document.getElementById("button")
+let divLi$$ = document.getElementById("div-container")
+let empty$$ = document.getElementById("div-empty")
 
 
-function addItem() {
-  let input$$ = document.getElementById("item");
-  let item = input.value;
-  let li$$ = document.createElement("li");
-  li$$.textContent = item;
-  let divLi$$ = document.querySelector(".li-container");
-  todoList.appendChild(li$$);
-  input.value = "";
-}
+button$$.addEventListener('click', function(){
+  let li$$ = document.createElement("li")
+  li$$.innerText = input$$.value; 
+  divLi$$.appendChild(li$$);
+  empty$$.style.display = 'none';
+  let deleteButton$$ = document.createElement("button")
+  deleteButton$$.addEventListener('click', function(){
+    li$$.style.display = 'none';
+  })
+  li$$.appendChild(deleteButton$$)
+})
