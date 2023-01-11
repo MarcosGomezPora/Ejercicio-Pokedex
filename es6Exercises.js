@@ -207,3 +207,40 @@ const mutationPorom = mutations.find((mutation) => {
 });
 const fusion = {...alienCucu, mutación: { ...mutationPorom}};
 console.log(fusion);
+
+
+
+//Iteration7
+const exams = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
+const reduce = exams.reduce((suma, exam) => {
+	return suma + exam.score;
+}, 0);
+console.log(reduce);
+
+
+const sumAprobado = exams.reduce((acc, exam) => {
+	if (exam.score >= 5) {
+		return acc + exam.score;
+	} else {
+		return acc;
+	}
+}, 0);
+console.log(sumAprobado);
+
+
+const sumaMedia = exams.reduce((suma, exam) => {
+	return suma + exam.score;
+}, 0);
+const media = sumaMedia / exams.length
+console.log(media);
