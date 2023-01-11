@@ -99,3 +99,54 @@ const citiesMap = cities.map((city) => {
 	return city.name;
 })
 console.log(citiesMap);
+
+
+//Iteration5
+const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+const agesFiltered = ages.filter((age) => age > 18);
+console.log(agesFiltered);
+
+const numbers = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+const numbersFiltered = numbers.filter((number) => {
+	return number % 2 === 0;
+})
+console.log(numbersFiltered);
+
+const streamers = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'}, 
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];
+const streamersLol = streamers.filter((streamer) => {
+	return streamer.gameMorePlayed === 'League of Legends';
+})
+console.log(streamersLol);
+
+const streamersUName = streamers.filter((streamer) => {
+	return streamer.name.includes('u');
+})
+console.log(streamersUName);
+
+const streamers35 = streamers.filter((streamer) => {
+	if (streamer.gameMorePlayed.includes('Legends')) {
+		if (streamer.age > 35) {
+			streamer.gameMorePlayed = streamer.gameMorePlayed.toUpperCase();
+		}
+		return streamer;
+	}
+})
+console.log(streamers35);
+
+const searchbar$$ = document.getElementById('inputFilter');
+const button$$ = document.querySelector('button') //Iteration 5.7
+const buscar = () => {
+	const streamersNameFilter = streamers.filter((streamer) => {
+		return streamer.name.toLowerCase().includes(searchbar$$.value.toLowerCase());
+		
+	});
+	console.log(streamersNameFilter);
+}
+searchbar$$.addEventListener("input", buscar);
+button$$.addEventListener("click", buscar); //Iteration5.7
+
