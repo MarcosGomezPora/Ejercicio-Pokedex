@@ -156,7 +156,7 @@ const streamers35 = streamers.filter((streamer) => {
 console.log(streamers35);
 
 
-/* const searchbar$$ = document.getElementById('inputFilter');
+const searchbar$$ = document.getElementById('inputFilter');
 const button$$ = document.querySelector('button') //Iteration 5.7
 const buscar = () => {
 	const streamersNameFilter = streamers.filter((streamer) => {
@@ -166,7 +166,7 @@ const buscar = () => {
 	console.log(streamersNameFilter);
 }
 searchbar$$.addEventListener("input", buscar);
-button$$.addEventListener("click", buscar);  *///Iteration5.7
+button$$.addEventListener("click", buscar); //Iteration5.7
 
 
 
